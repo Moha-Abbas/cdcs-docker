@@ -37,6 +37,12 @@ COPY pip/$PIP_CONF/pip.conf /root/.config/pip
 # Install additional python packages
 RUN pip install psycopg2 uwsgi gunicorn[gthread]
 
+
+### ADDED BY MOHAMMAD ABBAS ###
+# Install git again
+RUN apt-get update && apt-get install -y git
+###############################
+
 # Install requirements
 WORKDIR $DOCKYARD_SRVPROJ
 RUN pip install -r requirements.txt
