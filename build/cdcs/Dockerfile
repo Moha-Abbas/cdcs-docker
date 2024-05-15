@@ -48,6 +48,13 @@ WORKDIR $DOCKYARD_SRVPROJ
 RUN pip install -r requirements.txt
 RUN pip install -r requirements.core.txt
 
+
+### ADDED BY MOHAMMAD ABBAS ###
+# Run database migrations
+RUN python manage.py migrate --noinput
+###############################
+
+
 # Get entrypoint ready for the image
 COPY ./gunicorn.conf.py /etc
 COPY ./docker-entrypoint*.sh /
