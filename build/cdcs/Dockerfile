@@ -44,7 +44,7 @@ RUN apt-get update && apt-get install -y git
 ###############################
 
 # Copy requirements files
-COPY requirements.txt requirements.core.txt $DOCKYARD_SRVPROJ/
+#COPY requirements.txt requirements.core.txt $DOCKYARD_SRVPROJ/
 
 # Install requirements
 WORKDIR $DOCKYARD_SRVPROJ
