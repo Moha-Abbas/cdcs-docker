@@ -44,7 +44,7 @@ RUN apt-get update && apt-get install -y git
 ###############################
 
 # Copy requirements files
-#COPY requirements.txt requirements.core.txt $DOCKYARD_SRVPROJ/
+COPY requirements.txt requirements.core.txt $DOCKYARD_SRVPROJ/
 
 # Install requirements
 WORKDIR $DOCKYARD_SRVPROJ
@@ -54,7 +54,7 @@ RUN pip install -r requirements.core.txt
 
 ### ADDED BY MOHAMMAD ABBAS ###
 # Run database migrations
-# RUN python manage.py migrate --noinput
+RUN python manage.py migrate --noinput
 ###############################
 
 
