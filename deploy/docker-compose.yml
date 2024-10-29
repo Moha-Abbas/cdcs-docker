@@ -14,8 +14,6 @@ services:
     volumes:
       - cdcs_socket:/tmp/curator/
       - cdcs_static:/srv/curator_static
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/${SERVER_CONF}.conf:/etc/nginx/templates/default.conf.template
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/${SERVER_CONF}.conf:/etc/nginx/templates/default.conf.template:ro
       - ./nginx/cdcs.crt:/etc/nginx/cdcs.crt:ro
