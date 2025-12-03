@@ -14,6 +14,6 @@ uwsgi --chdir /srv/curator/ \
       --lazy-apps \
       --max-requests=100 \
       --max-requests-delta=10 \
-      --reload-on-rss=500 \
+      --reload-on-rss=2100 \
       --worker-reload-mercy=60
 echo "UWSGI started"
