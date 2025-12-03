@@ -68,8 +68,8 @@ services:
       - REDIS_HOST=${PROJECT_NAME}_cdcs_redis
       - REDIS_PORT=${REDIS_PORT:-6379}
       - REDIS_PASS=${REDIS_PASS}
-      - PROCESSES=2
-      - THREADS=2
+      - PROCESSES=4
+      - THREADS=4
     env_file:
       - ./saml2/.env
       - ./handle/.env
