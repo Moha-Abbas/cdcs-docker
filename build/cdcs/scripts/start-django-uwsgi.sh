@@ -12,6 +12,8 @@ uwsgi --chdir /srv/curator/ \
       --threads=${THREADS:-8} \
       --enable-threads \
       --lazy-apps \
-      --max-requests=10 \
-      --max-requests-delta=3
+      --max-requests=100 \
+      --max-requests-delta=10 \
+      --reload-on-rss=500 \
+      --worker-reload-mercy=60
 echo "UWSGI started"
